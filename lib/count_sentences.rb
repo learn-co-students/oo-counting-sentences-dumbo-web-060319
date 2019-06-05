@@ -1,11 +1,17 @@
 require 'pry'
 
 class String
+  # helper function
+  # takes one argument, returns true if self ends in that argument.
+
+  def end_in?(mark)
+    return true if self.split("")[-1] == mark
+      
+    return false
+  end
 
   def sentence?
-      return true if self.split("")[-1] == "."
-      
-      return false
+    end_in?(".")
   end
 
   def question?
