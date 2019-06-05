@@ -29,12 +29,7 @@ class String
     periodt = [".", "?", "!"]
     # binding.pry
     puts self
-    self.split("").each_cons(3) { |prev_char, char, next_char| 
-    count += 1 if periodt.include?(char) and !periodt.include?(prev_char) 
-    puts char
-    puts count
-    puts "---------------------"
-      }
+    self.split("").each_cons(3) { |prev_char, char, next_char| count += 1 if periodt.include?(next_char) and !periodt.include?(char) }
 
     count
   end
