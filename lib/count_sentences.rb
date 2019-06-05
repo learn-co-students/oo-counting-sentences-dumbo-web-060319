@@ -27,8 +27,14 @@ class String
     count = 0
     # Array that holds the different sentence endings
     periodt = [".", "?", "!"]
-
-    self.split("").map { |char| count += 1 if periodt.include?(char) }
+    # binding.pry
+    puts self
+    self.split("").each_cons(3) { |prev_char, char, next_char| 
+    count += 1 if periodt.include?(char) and !periodt.include?(prev_char) 
+    puts char
+    puts count
+    puts "---------------------"
+      }
 
     count
   end
