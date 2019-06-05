@@ -23,6 +23,13 @@ class String
   end
 
   def count_sentences
+    # count
+    count = 0
+    # Array that holds the different sentence endings
+    periodt = [".", "?", "!"]
 
+    self.split("").map { |char| count += 1 if periodt.include?(char) }
+
+    count
   end
 end
