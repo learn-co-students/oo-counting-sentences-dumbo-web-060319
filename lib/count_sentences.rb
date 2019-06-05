@@ -15,11 +15,11 @@ class String
   end
 
   def question?
-
+    end_in?("?")
   end
 
   def exclamation?
-
+    end_in?("!")
   end
 
   def count_sentences
